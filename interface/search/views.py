@@ -1,19 +1,27 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-from search.forms import query
-from search.forms import query
-from django.shortcuts import render
+from search.forms import querystr
+from django.views.generic import View
+from django.shortcuts import render,redirect
 
-from django.shortcuts import render
-
-def index(request):
-    if request.method == 'GET':
-        form=query
+class index(View):
+    form_class=querystr
+    template_name='search/search.html'
+    def get(self, request):
+        form=self.form_class()
         return render(request,self.template_name,{'form':form})
 
-    else:
-        print "hello"
+    def post(self, request):
         form = self.form_class(request.POST)
         print "hello"
-        query=form.cleaned_data['query']
-        return render(request, self.template_name, {'form': form})
+        if form.is_valid():
+            #print "Hello World"
+            query = form.cleaned_data['query']
+            print query
+            return redirect('/search/result')
+        else:
+            return render(request, self.template_name, {'form': form})
+
+
+def result(request):
+    return render(request,'search/result.html')

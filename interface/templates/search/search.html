@@ -1,14 +1,12 @@
-<!--<!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 input[type=text] {
-    width: 50%;
+    width: 25%;
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 4px;
-    font-size: 16px;
+    font-size: 14px;
     background-color: white;
     background-image: url('searchicon.png');
     background-position: 10px 10px;
@@ -24,26 +22,17 @@ input[type=text]:focus {
 </style>
 </head>
 <body>
-
 <p>Enter Your Query:</p>
-
-<form action="" method="post">
-
-  <input type="text" name="search" placeholder="Search..">
-</form>
-
-</body>
-</html>-->
-
 <form method="post">
     {% csrf_token %}
     {% for field in form %}
     <div>
-        <label>{{ field.label_tag }}</label>
     <div>{{ field }}</div>
     </div>
 {% endfor %}
-    <div>
+    </br>
         <button type="submit">Submit</button>
     </div>
 </form>
+</body>
+</html>

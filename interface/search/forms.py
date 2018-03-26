@@ -1,5 +1,4 @@
 from django import forms
 
-class query(forms.ModelForm):
-    class Meta:
-        fields=('query')
+class querystr(forms.Form):
+    query =  forms.CharField(label='Query',required=True)
