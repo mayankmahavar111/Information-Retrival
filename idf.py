@@ -60,8 +60,6 @@ def finalize(db,conn):
                 pass
         conn.commit()
 
-
-
 if __name__ == '__main__':
     db_name = 'document'
     table_name = ['train','term']
