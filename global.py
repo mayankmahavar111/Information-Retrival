@@ -3,7 +3,7 @@ from random import randint
 a=[]
 
 def getBody(table_name,db):
-    query='select * from {}'.format(table_name)
+    query='select idf from {}'.format(table_name)
     res = db.execute(query)
     temp=res.fetchall()
     res=[]
@@ -31,7 +31,7 @@ if __name__ == '__main__':
 	# 	print i
 
 	db_name = 'document'
-	table_name = "train"
+	table_name = "term"
 	conn = sqlite3.connect('{}.db'.format(db_name))
 	db = conn.cursor()
 	corpse=getBody(table_name,db)
