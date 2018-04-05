@@ -2,3 +2,9 @@
 *.txt
 *.sgm
 *.dtd
+*.db
+*.db
+*.pyc
+*.sqlite3
+*.pyc
+*.pyc
