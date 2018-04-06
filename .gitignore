@@ -8,3 +8,5 @@
 *.sqlite3
 *.pyc
 *.pyc
+*.db
+document.db
