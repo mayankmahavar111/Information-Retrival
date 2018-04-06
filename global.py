@@ -11,6 +11,10 @@ def getBody(table_name,db):
         res.append(x[0])
     return (res)
 
+def biasValue(index):
+	bias = clicks / tf_idf
+	return bias
+
 if __name__ == '__main__':
 	for i in range(10):
 		b=[]
