@@ -57,7 +57,7 @@ if __name__ == '__main__':
         tokens=word_tokenize(body)
         temp=[]
         for token in tokens:
-            if token.isalpha() == True and token is not stop:
+            if token.isalpha() == True and token not in stop:
                 temp.append(stemmer.stem(token.lower()))
         body=" ".join(temp)
         update_data(table_name,body,i,db,conn)

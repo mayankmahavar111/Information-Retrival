@@ -101,7 +101,7 @@ def transaction_bldr_relation(db ,conn):
 
 
 if __name__ == '__main__':
-    db_name = 'document'
+    db_name = 'result'
     conn = sqlite3.connect('{}.db'.format(db_name))
     db = conn.cursor()
     corpus_loc= 'reuters'

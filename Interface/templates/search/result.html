@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+{% load static%}
 <body>
+
+{% for key,value in res.items %}
+<div> <a href="/search/click/{{key}}/{{forloop.counter}}">{{value}} </a></div>
+{% endfor %}
 
 </body>
 </html>
