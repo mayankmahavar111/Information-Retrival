@@ -1,7 +1,7 @@
 # Information-Retrival
 ###Learning to Rank , Selection Bias , Personal Search
 
-#####Pre-Requisties installation
+##### Pre-Requisties installation
 pip install -r requirements.txt
 
 download document.db[2.81 gb] from 
@@ -14,7 +14,7 @@ now run preprocessing.py
 open *interface/search/view.py* file, find connectdb method and change 'dir' path according to your system 
 
 
-#####How to run program
+##### How to run program
 go to interface folder and then run 
 
 python manage.py runserver
@@ -34,7 +34,7 @@ then press submit
 The results will be shown in the page with links.
 click on link to see the full document.
 
-#####Use of Every file
+##### Use of Every file
 database.py : create database from reuters files
 
 preprocessing.py  : preprocess the data from database and then store it again in the database
