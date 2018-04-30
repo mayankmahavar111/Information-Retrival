@@ -7,6 +7,7 @@ pip install -r requirements.txt
 download document.db[2.81 gb] from 
 https://drive.google.com/open?id=1OroqztNS4ZwPog7JBv2jtwI9BYJTkWt5
 and replace it with current document.db file
+or generate database.db by following instruction given at last
 
 now run preprocessing.py
 
